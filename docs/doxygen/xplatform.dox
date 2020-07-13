@@ -1,0 +1,10 @@
+/// @mainpage
+///
+/// @section intro Introduction
+/// The xplatform library is a platform library with the following goals:
+/// * Work with high-level operating systems (Windows, Linux, BSD, OSX, QNX, etc)
+/// * Work with real-time operating systems (FreeRTOS, ThreadX, ucOS, etc)
+/// * Provide standard operating system primitives
+/// * Provide standard hardware interfaces
+/// * Hide the platform-specifics from the developer
+
