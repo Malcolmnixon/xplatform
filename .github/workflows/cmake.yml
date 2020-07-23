@@ -33,8 +33,8 @@ jobs:
     
     - name: make
       working-directory: ./build/posix/cmake
-      run: make
+      run: cmake --build .
     
     - name: ctest
       working-directory: ./build/posix/cmake
-      run: ctest
+      run: ctest --verbose .
