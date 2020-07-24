@@ -33,6 +33,9 @@
     <ClInclude Include="..\..\..\include\os\task.hpp">
       <Filter>Header Files\os</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\os\time.hpp">
+      <Filter>Header Files\os</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\win32\os\critical_section.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files\os</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\win32\os\task.cpp">
+      <Filter>Source Files\os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\win32\os\time.cpp">
       <Filter>Source Files\os</Filter>
     </ClCompile>
   </ItemGroup>
