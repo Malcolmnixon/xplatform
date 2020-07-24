@@ -22,37 +22,16 @@ namespace xpf
         /// @brief Destroys the critical section
         ~critical_section();
         
-        /// @brief Enter the critical section
-        void enter() noexcept;
+        /// @brief Lock the critical section
+        void lock() noexcept;
         
-        /// @brief Leave the critical section
-        void leave() noexcept;
+        /// @brief Unlock the critical section
+        void unlock() noexcept;
         
         // Delete unnecessary compiler-generated functions
         critical_section(const critical_section&) = delete;
         critical_section(critical_section&&) = delete;
         critical_section& operator=(const critical_section&) = delete;
         critical_section& operator=(critical_section&&) = delete;
-        
-        /// @brief Critical section entry class
-        class entry
-        {
-            /// @brief Critical section
-            critical_section& crit_;
-            
-        public:
-            /// @brief Constructs the critical section entry
-            /// @param c                Critical section to enter
-            entry(critical_section& c) noexcept : crit_(c)
-            {
-                crit_.enter();
-            }
-            
-            /// @brief Destroys the critial section entry
-            ~entry()
-            {
-                crit_.leave();
-            }
-        };
     };
 }

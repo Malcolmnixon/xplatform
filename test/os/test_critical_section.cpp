@@ -1,4 +1,5 @@
 #include "os/critical_section.hpp"
+#include "os/unique_lock.hpp"
 #include "gtest/gtest.h"
 
 using namespace xpf;
@@ -14,13 +15,13 @@ TEST(CriticalSection, Manual)
     // Create critical section
     critical_section crit;
     
-    // Manually enter then leave
-    crit.enter();
-    crit.leave();
+    // Manually lock then unlock
+    crit.lock();
+    crit.unlock();
     
-    // Manually enter then leave
-    crit.enter();
-    crit.leave();
+    // Manually lock then unlock
+    crit.lock();
+    crit.unlock();
 }
 
 TEST(CriticalSection, Entry)
@@ -30,12 +31,12 @@ TEST(CriticalSection, Entry)
     
     // Scoped entry
     {
-        critical_section::entry entry(crit);
+        unique_lock<critical_section> lock(crit);
     }
     
     // Scoped entry
     {
-        critical_section::entry entry(crit);
+        unique_lock<critical_section> lock(crit);
     }
 }
     

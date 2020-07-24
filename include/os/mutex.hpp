@@ -30,32 +30,5 @@ namespace xpf
         mutex(mutex&&) = delete;
         mutex& operator=(const mutex&) = delete;
         mutex& operator=(mutex&&) = delete;
-        
-        /// @brief Mutex lock class
-        class lock
-        {
-            /// @brief Mutex reference
-            mutex& mutex_;
-            
-        public:
-            /// @brief Constructs the mutex lock
-            /// @param m                Mutex to lock
-            lock(mutex& m) noexcept : mutex_(m)
-            {
-                mutex_.lock();
-            }
-            
-            /// @brief Destroys the mutex lock
-            ~lock()
-            {
-                mutex_.unlock();
-            }
-            
-            // Delete unnecessary compiler-generated functions
-            lock(const lock&) = delete;
-            lock(lock&&) = delete;
-            lock& operator=(const lock&) = delete;
-            lock& operator=(lock&&) = delete;
-        };
     };
 }

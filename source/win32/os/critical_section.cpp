@@ -13,12 +13,12 @@ critical_section::~critical_section()
 	delete static_cast<std::mutex*>(native_handle_);
 }
 
-void critical_section::enter() noexcept
+void critical_section::lock() noexcept
 {
 	static_cast<std::mutex*>(native_handle_)->lock();
 }
 
-void critical_section::leave() noexcept
+void critical_section::unlock() noexcept
 {
 	static_cast<std::mutex*>(native_handle_)->unlock();
 }
