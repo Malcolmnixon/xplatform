@@ -37,9 +37,16 @@ jobs:
         languages: cpp
 
     - name: cmake
-      uses: lukka/run-cmake@v2.5
-      with:
-        cmakeListsTxtPath: '${{ github.workspace }}/build/posix/cmake/CMakeLists.txt'
+      working-directory: ./build/cmake
+      run: cmake -Dtest=ON .
+    
+    - name: make
+      working-directory: ./build/cmake
+      run: cmake --build .
+    
+    - name: ctest
+      working-directory: ./build/cmake
+      run: ctest --verbose .
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
