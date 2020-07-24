@@ -36,17 +36,14 @@ jobs:
       with:
         languages: cpp
 
+    # Make Just the library (no tests)
     - name: cmake
       working-directory: ./build/cmake
-      run: cmake -Dtest=ON .
+      run: cmake .
     
     - name: make
       working-directory: ./build/cmake
       run: cmake --build .
-    
-    - name: ctest
-      working-directory: ./build/cmake
-      run: ctest --verbose .
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
