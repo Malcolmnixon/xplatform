@@ -37,6 +37,7 @@ if (test)
         test_runner
         ../../test/os/test_critical_section.cpp
         ../../test/os/test_flags.cpp
+        ../../test/os/test_mutex.cpp
         ../../test/os/test_task.cpp
         ../../test/os/test_time.cpp
     )
