@@ -15,6 +15,7 @@ if (WIN32)
         ../../source/win32/os/mutex.cpp
         ../../source/win32/os/flags.cpp
         ../../source/win32/os/task.cpp
+        ../../source/win32/os/time.cpp
     )
 else()
     add_library(
@@ -23,6 +24,7 @@ else()
         ../../source/posix/os/mutex.cpp
         ../../source/posix/os/flags.cpp
         ../../source/posix/os/task.cpp
+        ../../source/posix/os/time.cpp
     )
 endif()
 
@@ -32,11 +34,12 @@ if (test)
     enable_testing()
 
     add_executable(
-        test
+        test_runner
         ../../test/os/test_critical_section.cpp
+        ../../test/os/test_time.cpp
     )
 
-    target_link_libraries(test gtest gtest_main xplatform)
-    add_test(NAME test COMMAND test)
+    target_link_libraries(test_runner gtest gtest_main xplatform)
+    add_test(NAME test_runner COMMAND test_runner)
 endif()
 

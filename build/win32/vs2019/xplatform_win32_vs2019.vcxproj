@@ -23,12 +23,14 @@
     <ClInclude Include="..\..\..\include\os\flags.hpp" />
     <ClInclude Include="..\..\..\include\os\mutex.hpp" />
     <ClInclude Include="..\..\..\include\os\task.hpp" />
+    <ClInclude Include="..\..\..\include\os\time.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\win32\os\critical_section.cpp" />
     <ClCompile Include="..\..\..\source\win32\os\flags.cpp" />
     <ClCompile Include="..\..\..\source\win32\os\mutex.cpp" />
     <ClCompile Include="..\..\..\source\win32\os\task.cpp" />
+    <ClCompile Include="..\..\..\source\win32\os\time.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
