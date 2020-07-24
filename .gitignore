@@ -38,9 +38,9 @@
 # Build output
 /bin
 
-# Doxygen Output
-/docs/doxygen/html
-/docs/doxygen/warnings.txt
+# CMake Build
+/build/cmake/*
+!/build/cmake/CMakeLists.txt
 
 # Visual Studio Build
 /build/win32/vs2019/x64
