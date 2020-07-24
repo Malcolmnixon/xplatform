@@ -11,18 +11,18 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/../../bin/")
 if (WIN32)
     add_library(
         xplatform STATIC
-        ../../source/win32/critical_section.cpp
-        ../../source/win32/mutex.cpp
-        ../../source/win32/flags.cpp
-        ../../source/win32/task.cpp
+        ../../source/win32/os/critical_section.cpp
+        ../../source/win32/os/mutex.cpp
+        ../../source/win32/os/flags.cpp
+        ../../source/win32/os/task.cpp
     )
 else()
     add_library(
         xplatform STATIC
-        ../../source/posix/critical_section.cpp
-        ../../source/posix/mutex.cpp
-        ../../source/posix/flags.cpp
-        ../../source/posix/task.cpp
+        ../../source/posix/os/critical_section.cpp
+        ../../source/posix/os/mutex.cpp
+        ../../source/posix/os/flags.cpp
+        ../../source/posix/os/task.cpp
     )
 endif()
 
