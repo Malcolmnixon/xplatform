@@ -35,16 +35,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\win32\critical_section.cpp">
+    <ClCompile Include="..\..\..\source\win32\os\critical_section.cpp">
       <Filter>Source Files\os</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\win32\flags.cpp">
+    <ClCompile Include="..\..\..\source\win32\os\flags.cpp">
       <Filter>Source Files\os</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\win32\mutex.cpp">
+    <ClCompile Include="..\..\..\source\win32\os\mutex.cpp">
       <Filter>Source Files\os</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\win32\task.cpp">
+    <ClCompile Include="..\..\..\source\win32\os\task.cpp">
       <Filter>Source Files\os</Filter>
     </ClCompile>
   </ItemGroup>
