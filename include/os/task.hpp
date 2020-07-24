@@ -11,6 +11,9 @@ namespace xpf
         void* native_handle_ = nullptr;
         
     public:
+        /// @brief Default constructor
+        task() = default;
+        
         /// @brief Destroys the task
         ~task();
         
