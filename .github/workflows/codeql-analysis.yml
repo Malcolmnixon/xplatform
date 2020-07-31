@@ -39,7 +39,7 @@ jobs:
     # Make Just the library (no tests)
     - name: cmake
       working-directory: ./build/cmake
-      run: cmake .
+      run: cmake -Dtest=ON .
     
     - name: make
       working-directory: ./build/cmake
